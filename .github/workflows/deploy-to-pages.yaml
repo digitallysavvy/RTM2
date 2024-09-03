@@ -34,6 +34,7 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          cache-dependency-path: './debug-console-en/package-lock.json'
       - name: Install dependencies
         working-directory: ./debug-console-en
         run: npm ci
