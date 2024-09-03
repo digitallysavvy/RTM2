@@ -34,6 +34,13 @@ const theme = {
   },
 };
 
+// Add this interface declaration at the top of your file
+declare module 'agora-rtm' {
+  interface RTMConfig {
+    token?: string;
+  }
+}
+
 function App() {
   const [rtmClientList, setRtmClientList] = useState([]);
   const [channelInfo, setChannelInfo] =
@@ -168,7 +175,7 @@ function App() {
     <ConfigProvider theme={theme}>
       <div className="layout-container">
         <div className="header-container">
-          <img src={logo} height={'40px'} width={'191px'} />
+          <img src={logo} height={'40px'} width={'101px'} />
           <div className="avatar-container">
             <Select
               variant="filled"
